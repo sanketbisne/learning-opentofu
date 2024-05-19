@@ -19,7 +19,6 @@ resource "google_storage_bucket" "example1" {
    
     location                    = "ASIA-SOUTH1"
     name                        = "my-first-opentofu-bucket-01"
-    project                     = "qwiklabs-gcp-03-51a21544bd25"
     
     public_access_prevention    = "enforced"
     requester_pays              = false

@@ -1,18 +1,20 @@
 steps:
   - name: 'sanketbisne/opentofu-docker-image:v4-updated'
     entrypoint: 'sh'
+    dir: '/Running-Remotely'
     args: ['-c', 'ls' , 'pwd' , 'tofu init']
-    dir: '/Running-Remotely'
+    
 
   - name: 'sanketbisne/opentofu-docker-image:v4-updated'
     entrypoint: 'sh'
+    dir: '/Running-Remotely'
     args: ['-c', 'tofu plan']
-    dir: '/Running-Remotely'
+    
 
   - name: 'sanketbisne/opentofu-docker-image:v4-updated'
     entrypoint: 'sh'
-    args: ['-c', 'tofu apply']
     dir: '/Running-Remotely'
+    args: ['-c', 'tofu apply']
 
 # Optionally, you can specify a timeout for the build
 timeout: '1200s' # 20 minutes

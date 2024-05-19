@@ -7,7 +7,7 @@ steps:
   - name: 'sanketbisne/opentofu-docker-image:v4-updated'
     entrypoint: 'bash'
     dir: '/workspace/Running-Remotely' # Adjust the directory based on your project structure
-    args: ['-c', 'tofu plan --auto-approve']
+    args: ['-c', 'tofu plan ']
     
   - name: 'sanketbisne/opentofu-docker-image:v4-updated'
     entrypoint: 'bash'

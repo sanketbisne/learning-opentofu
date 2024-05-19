@@ -7,12 +7,12 @@ steps:
   - name: 'sanketbisne/opentofu-docker-image:v4-updated'
     entrypoint: 'bash'
     dir: '/workspace/Running-Remotely' # Adjust the directory based on your project structure
-    args: ['-c', 'tofu plan']
+    args: ['-c', 'tofu plan --auto-approve']
     
   - name: 'sanketbisne/opentofu-docker-image:v4-updated'
     entrypoint: 'bash'
     dir: '/workspace/Running-Remotely' # Adjust the directory based on your project structure
-    args: ['-c', 'tofu apply']
+    args: ['-c', 'tofu apply --auto-approve']
 
 # Optionally, you can specify a timeout for the build
 timeout: '1200s' # 20 minutes

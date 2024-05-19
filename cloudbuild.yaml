@@ -1,0 +1,29 @@
+steps:
+  - name: 'sanketbisne/opentofu-docker-image:v3'
+    entrypoint: 'bash'
+    args: ['-c', 'tofu init']
+    dir: 'Running-Remote/Root_module/learning-opentofu/Running-Remotely'
+
+  - name: 'sanketbisne/opentofu-docker-image:v3'
+    entrypoint: 'bash'
+    args: ['-c', 'tofu plan']
+    dir: 'Running-Remote/Root_module/learning-opentofu/Running-Remotely'
+
+  - name: 'sanketbisne/opentofu-docker-image:v3'
+    entrypoint: 'bash'
+    args: ['-c', 'tofu apply']
+    dir: 'Running-Remote/Root_module/learning-opentofu/Running-Remotely'
+
+# Optionally, you can specify a timeout for the build
+timeout: '1200s' # 20 minutes
+
+# If you need to specify environment variables, add them here
+# env:
+#   - 'ENV_VAR_NAME=value'
+
+# Optionally, you can specify where to store build logs
+# logsBucket: 'gs://your-gcs-bucket-name'
+
+# Specify any substitutions (if necessary)
+# substitutions:
+#   _VARIABLE_NAME:

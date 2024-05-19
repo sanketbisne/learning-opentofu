@@ -1,15 +1,15 @@
 steps:
-  - name: 'sanketbisne/opentofu-docker-image:v4'
+  - name: 'sanketbisne/opentofu-docker-image:v4-updated'
     entrypoint: 'sh'
     args: ['-c', 'tofu init']
     dir: 'Running-Remote/Root_module/learning-opentofu/Running-Remotely'
 
-  - name: 'sanketbisne/opentofu-docker-image:v4'
+  - name: 'sanketbisne/opentofu-docker-image:v4-updated'
     entrypoint: 'sh'
     args: ['-c', 'tofu plan']
     dir: 'Running-Remote/Root_module/learning-opentofu/Running-Remotely'
 
-  - name: 'sanketbisne/opentofu-docker-image:v4'
+  - name: 'sanketbisne/opentofu-docker-image:v4-updated'
     entrypoint: 'sh'
     args: ['-c', 'tofu apply']
     dir: 'Running-Remote/Root_module/learning-opentofu/Running-Remotely'
